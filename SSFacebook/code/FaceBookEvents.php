@@ -125,7 +125,6 @@ class FacebookEvents_Controller extends Page_Controller
 	
 	public function init()
 	{
-		
 		//Requirements::css(project() . "/css/fb.css");
 		Requirements::themedCSS('fb');
 		parent::init();
