@@ -1,0 +1,57 @@
+#FBContent *{
+	color: white;
+}
+
+#FBContent .FBmessage {
+    background: none repeat scroll 0 0 black;
+    border: 4px solid orange;
+    color: white;
+    margin: 15px;
+    padding: 5px;
+    width: 92%;
+}
+
+
+#FBContent div.FBmessage div.comentarios
+{
+	  border: 1px solid white;
+}
+
+
+#FBContent .FBmessage .FBAuthor{
+	overflow: hidden;
+	padding: 10px;
+}
+#FBContent .FBmessage .FBAuthor a{
+	float:left;
+	margin-right:10px;
+}
+
+#FBContent .FBmessage .FBMessageBody{
+	overflow: hidden;
+	padding: 10px;
+
+}
+#FBContent .FBmessage .FBMessageBody a{
+	float:left;
+	margin-right:10px;
+
+}
+
+
+.comentario {
+
+ overflow: hidden;
+ border: 1px solid grey;
+ padding: 10px;
+	 
+}
+
+.comentario a{ 
+	float:left;
+	margin-right:10px;
+}
+
+.comentario div p{ 
+	margin: 0 0 5px;
+}
