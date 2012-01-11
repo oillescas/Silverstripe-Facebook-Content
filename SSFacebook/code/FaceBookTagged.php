@@ -1,9 +1,9 @@
 <?php
-class FacebookPost extends Page
+class FacebookTagged extends Page
 {
 	//Note: that the corresponding filename to the path given for $icon will end with -file.gif, 
 	//e.g. when you specify news above, the filename will be news-file.gif.
-	static $icon = "fb_feed/img/fb";
+	static $icon = "fb_feed/img/tagged";
 
 	static $db = array();
 	
@@ -27,7 +27,7 @@ class FacebookPost extends Page
 }
 
 
-class FacebookPost_Controller extends Page_Controller
+class FacebookTagged_Controller extends Page_Controller
 {
 	static $allowed_actions = array ();
 	
