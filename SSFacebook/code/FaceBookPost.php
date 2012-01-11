@@ -5,9 +5,21 @@ class FacebookPost extends Page
 	//e.g. when you specify news above, the filename will be news-file.gif.
 	static $icon = "fb_feed/img/post";
 
-	static $db = array();
+	static $db = array(
+		 'FBUser' => 'Text'
+	);
 	
 	static $has_many = array ();
+		
+		
+	function getCMSFields() {
+        $fields = parent::getCMSFields();
+         
+        $fields->addFieldToTab('Root.Content.Facebook', new TextField('FBUser'), 'Usuario de Facebook');
+         
+        return $fields;
+    }
+		
 		
 	function FbData() {
 		
