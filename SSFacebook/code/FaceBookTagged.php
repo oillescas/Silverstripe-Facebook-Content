@@ -1,9 +1,9 @@
 <?php
-class FacebookEvents extends Page
+class FacebookPost extends Page
 {
 	//Note: that the corresponding filename to the path given for $icon will end with -file.gif, 
 	//e.g. when you specify news above, the filename will be news-file.gif.
-	static $icon = "fb_feed/img/events";
+	static $icon = "fb_feed/img/fb";
 
 	static $db = array();
 	
@@ -19,7 +19,7 @@ class FacebookEvents extends Page
 		);
 				
 		
-		$datos = $facebook->api('/149050115180034/events');
+		$datos = $facebook->api('/149050115180034/tagged');
 			
 		//print_r($doSet);
 		return $datos;
@@ -27,12 +27,13 @@ class FacebookEvents extends Page
 }
 
 
-class FacebookEvents_Controller extends Page_Controller
+class FacebookPost_Controller extends Page_Controller
 {
 	static $allowed_actions = array ();
 	
 	public function init()
 	{
+		
 		//Requirements::css(project() . "/css/fb.css");
 		Requirements::themedCSS('fb');
 		parent::init();

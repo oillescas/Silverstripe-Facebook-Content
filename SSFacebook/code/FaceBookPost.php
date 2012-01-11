@@ -19,7 +19,7 @@ class FacebookPost extends Page
 		);
 				
 		
-		$datos = $facebook->api('/oillescas/posts');
+		$datos = $facebook->api('/149050115180034/posts');
 			
 		//print_r($doSet);
 		return $datos;
