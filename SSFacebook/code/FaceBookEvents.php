@@ -31,7 +31,7 @@ class FacebookEvents extends Page
 		);
 				
 		
-		$datos = $facebook->api('/149050115180034/events');
+		$datos = $facebook->api("/"+$this->FBUser+"/events");
 			
 		//print_r($doSet);
 		return $datos;
