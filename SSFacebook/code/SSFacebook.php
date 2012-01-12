@@ -18,7 +18,6 @@ class SSFacebook
 	
 	function api($consulta) {
 		
-		
 		$facebook = new Facebook(array(
 		  'appId'  => '286837171347215',
 		  'secret' => '9ac87256ae1b411e857586a4e24b0f75',

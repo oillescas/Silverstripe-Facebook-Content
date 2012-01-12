@@ -1,3 +1,3 @@
 <?php
 
-	Object::add_extension('SiteConfig', 'FacebookSiteConfig');
+	//Object::add_extension('SiteConfig', 'FacebookSiteConfig');

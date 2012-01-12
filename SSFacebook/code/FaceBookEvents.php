@@ -3,7 +3,7 @@ class FacebookEvents extends Page
 {
 	//Note: that the corresponding filename to the path given for $icon will end with -file.gif, 
 	//e.g. when you specify news above, the filename will be news-file.gif.
-	static $icon = "fb_feed/img/events";
+	static $icon = "SSFacebook/img/events";
 
 	static $db = array(
 		 'FBUser' => 'Text'
@@ -13,11 +13,10 @@ class FacebookEvents extends Page
 		
 		
 	function getCMSFields() {
-        $fields = parent::getCMSFields();
-         
-        $fields->addFieldToTab('Root.Content.Facebook', new TextField('FBUser'), 'Usuario de Facebook');
-         
-        return $fields;
+       
+	   $fields = parent::getCMSFields();
+       $fields->addFieldToTab('Root.Content.Facebook', new TextField('FBUser', 'Usuario de Facebook'));
+       return $fields;
     }
 		
 		
@@ -30,8 +29,7 @@ class FacebookEvents extends Page
 			"AAAEE4Hu03w8BAIiZB060kMRQKK2O208FGRHncd9PUAXMrwHVqGdksXYYuXHerbwtBFAxG42Tmg0c3KhEMRsh1xKRyxTMZD"
 		);
 				
-		
-		$datos = $facebook->api("/"+$this->FBUser+"/events");
+		$datos = $facebook->api("/$this->FBUser/events");
 			
 		//print_r($doSet);
 		return $datos;
