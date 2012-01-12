@@ -7,36 +7,37 @@ class SSFacebook
 	private $accessToken;
 	
 	
-	public function __constructor($appid,$secret,$domain,$accessToken)
+	public function SSFacebook($appid,$secret,$domain,$accessToken)
 	{
-		
 		$this->appID = $appid;
 		$this->secret = $secret;
 		$this->domain = $domain;
 		$this->accessToken = $accessToken;
+		
+		
 	}
 	
 	function api($consulta) {
 		
 		$facebook = new Facebook(array(
-		  'appId'  => '286837171347215',
-		  'secret' => '9ac87256ae1b411e857586a4e24b0f75',
+		  'appId'  => $this->appID,
+		  'secret' => $this->secret,
 		  'cookie' => true,
-		  'domain' => 'demo.montalbo.net'
+		  'domain' => $this->domain
 		));
 				
 		
-		$facebook->setAccessToken("AAAEE4Hu03w8BAIuYfFmXD1Ni5SsR1ZBNXIPqlgR8VuaWEt9Pshl3xGPmiTw7Qh3fKRrwWElRROS7aWk9HVlNhLYZB7cLYZD");
-		//$datos = $facebook->api('/149050115180034/events');
-		//$datos = $facebook->api('/46683382206/events');
-		
+		$facebook->setAccessToken($this->accessToken);
+	
 		try
 		{
 			$datos = $facebook->api($consulta);
 		}
 		catch(Exception $e)
-		{
-			print_r($e);
+		{	
+			//print_r($e);
+			echo "<!-- Error FB $e -->";
+			return $e;
 		}
 	
 		

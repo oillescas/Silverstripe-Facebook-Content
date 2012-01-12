@@ -22,16 +22,17 @@ class FacebookTagged extends Page
 		
 		
 	function FbData() {
-		
+		$config = SiteConfig::current_site_config(); 
+			
 		$facebook = new SSFacebook(
-			'286837171347215',
-			'9ac87256ae1b411e857586a4e24b0f75',
-			'demo.montalbo.net',
-			"AAAEE4Hu03w8BAIiZB060kMRQKK2O208FGRHncd9PUAXMrwHVqGdksXYYuXHerbwtBFAxG42Tmg0c3KhEMRsh1xKRyxTMZD"
+			$config->apiKey,
+			$config->secretKey,
+			$config->domain,
+			$config->accessToken
 		);
 				
 		
-		$datos = $facebook->api("/$this->FBUser/tagged');
+		$datos = $facebook->api("/$this->FBUser/tagged");
 			
 		//print_r($doSet);
 		return $datos;
