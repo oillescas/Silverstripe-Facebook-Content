@@ -1,0 +1,17 @@
+IMPORTANTE ANTES DE SUBIR CUALQUIER ARCHIVO AL SERVIDOR 
+HAY QUE LOGARSE COMO ADMINISTRADOR
+
+Para instalar el modulo SSFacebook solo hay que subir la carpeta "SSFacebook" a la raiz 
+del sitio web.
+y hacer una llamada a http://{host}/dev/build
+	
+Continuará...
+	
+IMPORTANT BEFORE ANY FILES TO THE SERVER UP
+Log On BE AS ADMINISTRATOR
+
+To install the module SSFacebook just have to upload the folder "SSFacebook" to the root
+the website.
+and make a call to http:// {host} / dev / build
+
+To be continued ...
